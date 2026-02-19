@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36" version="29.4.0">
+  <diagram name="Процесс 2: Взаимодействие с лабораторией (To-Be)" id="pH-NkQa5qLQfIBodnPRI">
+    <mxGraphModel dx="2154" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6hHct3GM-pwduKGuhugc-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#8C8496;strokeColor=#736782;fontColor=#ffffff;" value="&lt;b&gt;Лаборатория&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="40" x="730" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Сервис интеграции&lt;/b&gt;&lt;br&gt;с лабораторией" vertex="1">
+          <mxGeometry height="70" width="140" x="600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-4" parent="1" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;&amp;nbsp;Объектное хранилище&lt;/b&gt;&lt;br&gt;(Шифрование, теги PII)" vertex="1">
+          <mxGeometry height="80" width="140" x="827" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="&lt;b&gt;&amp;nbsp;Audit &amp;amp; Monitoring&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="400" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-6" edge="1" parent="1" source="6hHct3GM-pwduKGuhugc-1" style="endArrow=blockThin;html=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#008000;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="6hHct3GM-pwduKGuhugc-13" value="HTTPS (TLS 1.3) + API Key">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="380" />
+              <mxPoint x="620" y="315" />
+            </Array>
+            <mxPoint x="850" y="340" as="sourcePoint" />
+            <mxPoint x="550" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-7" edge="1" parent="1" source="6hHct3GM-pwduKGuhugc-13" style="endArrow=blockThin;html=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#008000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="6hHct3GM-pwduKGuhugc-3" value="Валидация, маскирование">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="235" />
+            </Array>
+            <mxPoint x="550" y="320" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-8" edge="1" parent="1" source="6hHct3GM-pwduKGuhugc-3" style="endArrow=blockThin;html=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#008000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="6hHct3GM-pwduKGuhugc-4" value="Сохранение с тегами (PII, MEDICAL)">
+          <mxGeometry relative="1" x="-0.1915" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="670" y="170" />
+              <mxPoint x="897" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-9" edge="1" parent="1" source="6hHct3GM-pwduKGuhugc-13" style="endArrow=blockThin;html=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#0000ff;dashed=1;exitX=0.559;exitY=1.036;exitDx=0;exitDy=0;exitPerimeter=0;" target="6hHct3GM-pwduKGuhugc-5" value="Логирование всех операций">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="477" y="430" />
+              <mxPoint x="477" y="430" />
+            </Array>
+            <mxPoint x="475" y="390" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="&lt;b&gt;Врач&lt;/b&gt;&lt;br&gt;(доступ по RBAC)" vertex="1">
+          <mxGeometry height="50" width="100" x="100" y="295" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-11" edge="1" parent="1" source="6hHct3GM-pwduKGuhugc-10" style="endArrow=blockThin;html=1;fontSize=11;edgeStyle=orthogonalEdgeStyle;rounded=0;" value="Аутентифицированный доступ">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-12" parent="1" style="text;html=1;strokeColor=none;fillColor=#e1f5e1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;" value="&lt;b&gt;Улучшения:&lt;/b&gt;&lt;br&gt;- API-интеграция вместо email&lt;br&gt;- TLS для внешнего канала&lt;br&gt;- Тегирование данных&lt;br&gt;- Аудит доступа" vertex="1">
+          <mxGeometry height="100" width="200" x="797" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="6hHct3GM-pwduKGuhugc-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;b&gt;&amp;nbsp;API Gateway&lt;/b&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;(Аутентификация,&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;TLS, Маскирование)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="410" y="270" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
